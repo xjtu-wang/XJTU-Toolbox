@@ -1,0 +1,11 @@
+{
+    "user_info": {
+        "student_id": "",
+        "password": ""
+    },
+    "chair": {
+        "star_chair": ["A101", "A102", "A103","Y003"],
+        "floor": "3",
+        "area": "北楼三层ILibrary-B（西）"
+    }
+}

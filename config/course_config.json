@@ -1,0 +1,23 @@
+{
+    "user_info": {
+        "student_id": "",
+        "password": ""
+    },
+    "timing_settings": {
+        "target_time": "2025-06-28 08:00:00",
+        "retry_keywords": [
+            "该课程超过课容量",
+            "名额",
+            "已满",
+            "未到选课时间"
+        ]
+    },
+    "target_course": {
+        "teachingClassId": "202420253CORE10030301",    
+        "electiveBatchCode": "8fe6b2ca0b334a41b65c8684eac30470",
+        "isMajor": "1",
+        "campus": "1",
+        "teachingClassType": "XGXK",
+        "isAlternate": "0"
+    }
+}
