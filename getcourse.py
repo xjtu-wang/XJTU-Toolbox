@@ -44,16 +44,16 @@ def main():
     # =================================================================
     print("启动浏览器，准备通过Selenium登录主门户...")
     edge_options = webdriver.EdgeOptions()
-    edge_options.add_argument('--headless') # 如果你不需要看到浏览器界面，可以启用无头模式
+    #edge_options.add_argument('--headless') # 如果你不需要看到浏览器界面，可以启用无头模式
     driver = webdriver.Edge(options=edge_options)
     driver.get(main_login_url)
 
     # --- 在这里，你需要编写Selenium代码来定位输入框和按钮，并完成登录 ---
     # 等待用户名输入框加载完成
     wait = WebDriverWait(driver, 30) # 等待最多30秒
-    username_field = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="form1"]/input[1]'))) 
-    password_field = driver.find_element(By.XPATH, '//*[@id="form1"]/input[2]') 
-    login_button = driver.find_element(By.XPATH, '//*[@id="account_login"]') 
+    username_field = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[1]/div/div/input'))) 
+    password_field = driver.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[2]/div/div/input') 
+    login_button = driver.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[3]/div/button') 
 
     username_field.send_keys(MY_STUDENT_ID)
     password_field.send_keys(MY_PASSWORD)

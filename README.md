@@ -69,7 +69,7 @@ pip install -r requirements.txt
     *   `course_config.json`: 配置要抢的课程代码等。
         - teachingClassId 为目标课程的学期+课程号+班级号，例如2024-2025第三学期小学期，课程号为CORE100103，班级号为01，对应的 teachingClassId 为 202420253CORE10010301
         - electiveBatchCode 为选课轮次编号，可通过检查浏览器选择轮次元素得到，图中code项就是选课轮次编号![alt text](img/image.png)
-        - teachingClassType 为课程类型编号，请自行抓包获取
+        - teachingClassType 为课程类型编号，主修推荐课程为TJKC,基础通识类为XGXK
     请根据你的需求，用文本编辑器打开并修改这些 `.json` 文件。
 
 ### 4. 运行程序

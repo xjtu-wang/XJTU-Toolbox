@@ -61,9 +61,9 @@ def jump_ad(browser):
 def login(browser):
     browser.find_element(By.XPATH, '//*[@id="header"]/div/div/div/div/div/div[1]/span').click()
     time.sleep(2)
-    browser.find_element(By.XPATH, '//*[@id="form1"]/input[1]').send_keys(account)
-    browser.find_element(By.XPATH, '//*[@id="form1"]/input[2]').send_keys(password)
-    browser.find_element(By.XPATH, '//*[@id="account_login"]').click()
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[1]/div/div/input').send_keys(account)
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[2]/div/div/input').send_keys(password)
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[3]/div/button').click()
     time.sleep(2)
 
 def get_all_seats_info(browser):

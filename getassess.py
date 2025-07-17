@@ -76,9 +76,9 @@ def main():
 
         print("正在填写账号密码...")
         # 等待用户名输入框出现并填写
-        username_input = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='form1']/input[1]")))
-        password_input = driver.find_element(By.XPATH, "//*[@id='form1']/input[2]") 
-        login = driver.find_element(By.XPATH, '//*[@id="account_login"]')  # 登录按钮
+        username_input = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[1]/div/div/input')))
+        password_input = driver.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[2]/div/div/input')
+        login = driver.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[3]/div/button')
         username_input.send_keys(USERNAME)
         password_input.send_keys(PASSWORD)
         safe_click(driver, login, "登录按钮")      

@@ -9,12 +9,13 @@
             "该课程超过课容量",
             "名额",
             "已满",
-            "未到选课时间"
+            "未到选课时间",
+            "当前时间不在选课开放时间范围内"
         ]
     },
     "target_course": {
-        "teachingClassId": "202420253CORE10030301",    
-        "electiveBatchCode": "8fe6b2ca0b334a41b65c8684eac30470",
+        "teachingClassId": "202520261COMP40082701",    
+        "electiveBatchCode": "cb9014b8971b481ebb54fba72c1a5c3b",
         "isMajor": "1",
         "campus": "1",
         "teachingClassType": "XGXK",

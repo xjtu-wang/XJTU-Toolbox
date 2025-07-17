@@ -80,9 +80,9 @@ def login(browser):
     time.sleep(2)  # 等待页面加载
     wait = WebDriverWait(browser, 10)
     wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="header"]/div/div/div/div/div/div[1]/span'))).click()
-    browser.find_element(By.XPATH, '//*[@id="form1"]/input[1]').send_keys(MY_STUDENT_ID)
-    browser.find_element(By.XPATH, '//*[@id="form1"]/input[2]').send_keys(MY_PASSWORD)
-    browser.find_element(By.XPATH, '//*[@id="account_login"]').click()
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[1]/div/div/input').send_keys(USERNAME)
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[2]/div/div/input').send_keys(PASSWORD)
+    browser.find_element(By.XPATH, '//*[@id="vue_main"]/div[2]/div[2]/div/div[4]/div/div[2]/div[1]/div/form/div[3]/div/button').click()
     time.sleep(2)
     try:
         # 设置一个较短的等待时间，比如3秒。
@@ -143,13 +143,10 @@ main_login_url = "http://www.lib.xjtu.edu.cn/"
 def main():
     edge_options = webdriver.EdgeOptions()
     edge_options.add_argument('--headless')  # 如果不需要可视化界面，可以启用无头模式
-    edge_options.add_argument('--disable-gpu')  # 禁用GPU加速
     edge_options.add_argument('--no-sandbox')  # 禁用沙盒模式
     edge_options.add_argument('--disable-dev-shm-usage')  # 禁用共享内存
     edge_options.add_argument('--allow-insecure-localhost') 
     edge_options.add_argument('--ignore-ssl-errors')
-    edge_options.add_argument('--ignore-certificate-errors')  # 忽略证书错误
-    edge_options.add_argument('--window-size=1920,1080')
     #伪造浏览器UA
     #edge_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0")
     # 创建浏览器实例
