@@ -113,6 +113,19 @@ def main():
                 print(" > 已进入评教页面。")
                 evaluation_count += 1
 
+                # 等待评分区加载完成
+                print(" > 等待评分选项加载...")
+                rating_groups = wait.until(EC.presence_of_all_elements_located(
+                    (By.CSS_SELECTOR, ":scope .kc-js-right > div > div:last-child")
+                ))
+
+                print(f" > 找到 {len(rating_groups)} 个评分题目，开始选择“满分”...")
+                for option in rating_groups:
+                    option.click()
+                    time.sleep(0.1) # 模拟人类的点击间隔
+
+                print(" > 所有评分题已选择“满分”。")
+
                 # 等待评教表单页面加载完成（以单选按钮出现为标志）
                 print(" > 正在选择所有问题的“非常满意”...")
                 # 使用JS脚本中的CSS选择器: label:nth-child(1).bh-radio-label
@@ -170,6 +183,20 @@ def main():
                 print(" > 已进入期末评教页面。")
                 evaluation_count += 1
 
+
+                # 等待评分区加载完成
+                print(" > 等待评分选项加载...")
+                rating_groups = wait.until(EC.presence_of_all_elements_located(
+                    (By.CSS_SELECTOR, ":scope .kc-js-right > div > div:last-child")
+                ))
+
+                print(f" > 找到 {len(rating_groups)} 个评分题目，开始选择“满分”...")
+                for option in rating_groups:
+                    option.click()
+                    time.sleep(0.1) # 模拟人类的点击间隔
+
+                print(" > 所有评分题已选择“满分”。")
+
                 # 等待评教表单页面加载完成（以单选按钮出现为标志）
                 print(" > 正在选择所有问题的“非常满意”...")
                 
@@ -177,6 +204,8 @@ def main():
                 for option in very_satisfied_options:
                     option.click()
                     time.sleep(0.1) # 模拟人类的点击间隔
+
+
 
                 # 填写意见和建议
                 print(f" > 正在填写建议: '{SUGGESTION_TEXT}'")
